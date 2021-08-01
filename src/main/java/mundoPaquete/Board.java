@@ -61,7 +61,7 @@ public class Board {
         for (int i = 0; i < ROW_NUM; i++) {
             for (int j = 0; j < COLUMN_NUM; j++) {
                 // Filter and collect the boxes that are free
-                if(boxes[i][j].getBoolValue()) {
+                if(boxes[i][j].getAvailable()) {
                     emptyBoxes.add(boxes[i][j]);
                 }
             }            

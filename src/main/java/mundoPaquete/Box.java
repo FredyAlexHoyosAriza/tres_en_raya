@@ -5,14 +5,14 @@ public class Box {
     // Attributes
     private int logicalValue;
     private String textualValue;
-    private boolean boolValue;
+    private boolean available;
     private int row, column; // Cuando no se inicializan tipos de datos entero, por defecto, el sistema los pone en 0
 
     // Constructors
     public Box() {
         logicalValue = 0;
         textualValue = "_"; // Un tipo de dato char se especifica entre camillas sencillas
-        boolValue = true;
+        available = true;
         row = -1;
         column = -1;        
     }
@@ -20,7 +20,7 @@ public class Box {
     public Box(int _row, int _column) {
         logicalValue = 0;
         textualValue = "_"; // Un tipo de dato char se especifica entre camillas sencillas
-        boolValue = true;
+        available = true;
         row = _row;
         column = _column;        
     }
@@ -29,11 +29,11 @@ public class Box {
         if(_logicalValue == 1) {
             logicalValue = _logicalValue;
             textualValue = "O";
-            boolValue = false;
+            available = false;
         } else if(_logicalValue == 10) {
             logicalValue = _logicalValue;
             textualValue = "X";
-            boolValue = false;
+            available = false;
         } else {
             System.out.println("** Warning: Invalid box assigment **");
         }
@@ -44,7 +44,7 @@ public class Box {
         if(_logicalValue == 1 || _logicalValue == 10) {
             logicalValue = _logicalValue;
             textualValue = _textualValue;
-            boolValue = false;
+            available = false;
         } else {
             System.out.println("** Warning: Invalid box assigment **");
         }
@@ -59,8 +59,8 @@ public class Box {
         String boxInfo = "\n--- BoxInfo ---\n";
         boxInfo += "Row: " + this.row + "\n";
         boxInfo += "Column: " + this.column + "\n";
-        // String freeMessage = this.boolValue ? "Yes" : "Not" ;
-        boxInfo += "Free: " + (this.boolValue ? "Yes" : "Not") + "\n";
+        // String freeMessage = this.available ? "Yes" : "Not" ;
+        boxInfo += "Free: " + (this.available ? "Yes" : "Not") + "\n";
 
         // The use of the method of the superior class and not the current one is specified
         // super.toString();
@@ -76,8 +76,8 @@ public class Box {
         return row;
     }
 
-    public boolean getBoolValue() {
-        return true;
+    public boolean getAvailable() {
+        return available;
     }
 
     // Retorna el valor a inprimir en consola ('O', 'X' o '-'')
