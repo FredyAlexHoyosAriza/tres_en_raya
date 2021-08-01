@@ -2,7 +2,7 @@ package mundoPaquete;
 import java.util.ArrayList;
 
 public class PlayerX extends Player {
-    // In Java it is only possible to inherit from the mother class,
+    // In Java it is only possible to inherit from the super class (mother class),
     // not from grandparents or other relatives
 
     // Attributes -> inherited from player
@@ -35,11 +35,5 @@ public class PlayerX extends Player {
         // super.play(this.chooseUpperLeft(board), board);
         super.play(board.getEmptyBoxes().get(0), board);
     }
-
-
-
-    // Getters
-
-    // Setters
     
 }
