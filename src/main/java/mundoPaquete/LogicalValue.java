@@ -1,7 +1,11 @@
 package mundoPaquete;
 
-public enum LogicalValues {
+public enum LogicalValue {
+    
+    // LogicalValue hosts constant logical control parameters;
     // Enums logical values of a game
+
+    // All fields in an enumeration are public and static, therefore they don't require instances
 
     // Logical values of playerX
     PLAYER_X(10), TICTACTOE_X(30), // Se asigna 10 a PLAYER_X y 30 a TICTACTOE_X
@@ -22,7 +26,7 @@ public enum LogicalValues {
     // Assciation Attribute
     private int logicalValue;
 
-    LogicalValues(int _logicalValue) {
+    LogicalValue(int _logicalValue) {
         this.logicalValue = _logicalValue;
     }
 

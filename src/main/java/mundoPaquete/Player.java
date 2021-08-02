@@ -18,6 +18,7 @@ public abstract class Player {
     }
 
     // Methods (Behavior)
+    // The player uses a board object but doesn't instance it or host it
 
     // Randomly choose the box of the board
     public Box chooseRandomBox(Board board) {
@@ -29,6 +30,7 @@ public abstract class Player {
 
         // Asks to the board object for the empty boxes
         ArrayList<Box> emptyBoxes = board.getEmptyBoxes();
+        // emptyBoxes.isEmpty();
 
         // Choose random box
         int min = 0;
@@ -38,6 +40,7 @@ public abstract class Player {
         // allows to change the upper and lower stops
         int chosenBoxIndex = min + (int)(Math.random() * (max-min));
         chosenBox = emptyBoxes.get(chosenBoxIndex);
+        
 
         // Returns the chosen box
         return chosenBox;

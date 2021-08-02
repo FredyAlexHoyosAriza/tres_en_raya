@@ -80,6 +80,10 @@ public class Box {
         return available;
     }
 
+    public int getLogicalValue() {
+        return logicalValue;
+    }
+
     // Retorna el valor a inprimir en consola ('O', 'X' o '-'')
     public String getTextualValue() {
         return textualValue;
